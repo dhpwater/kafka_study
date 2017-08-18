@@ -66,7 +66,8 @@ public class Consumer extends ShutdownableThread {
             	System.out.println(p);
                 System.out.printf("topic=%s, partition=%s, offset = %d, key = %s, value = %s\n", record.topic(),record.partition(),record.offset(), record.key(), record.value());
             }
-        }
+		}
+		
 	}
 
 	@Override

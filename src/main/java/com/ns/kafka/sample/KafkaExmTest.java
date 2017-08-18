@@ -6,9 +6,9 @@ public class KafkaExmTest {
 
 	public static void main(String[] args) {
 
-		produce();
+//		produce();
 
-//		consume();
+		consume();
 	}
 	
 	public static void produce(){

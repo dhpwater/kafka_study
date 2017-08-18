@@ -1,4 +1,4 @@
-package com.ns.kafka.producer;
+package com.ns.kafka.sample;
 
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
@@ -10,6 +10,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 
 import com.alibaba.fastjson.JSON;
+import com.ns.kafka.KafkaProperties;
 
 public class Producer extends Thread {
     private final KafkaProducer<Integer, String> producer;
@@ -32,7 +33,7 @@ public class Producer extends Thread {
     public void run() {
         int messageNo = 1;
         Person person = new Person() ;
-        for ( ; messageNo <= 10 ; messageNo++) {
+        for ( ; messageNo <= 100 ; messageNo++) {
         	person.setId(messageNo);
         	person.setAge(Integer.parseInt( RandomStringUtils.randomNumeric(2) ));
         	person.setName(RandomStringUtils.random(5, new char[]{'a','b','c','d','e','f','g','h'}));
@@ -53,6 +54,7 @@ public class Producer extends Thread {
                 }
             }
         }
+        producer.close();
     }
 }
 

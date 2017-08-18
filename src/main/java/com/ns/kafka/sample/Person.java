@@ -1,4 +1,4 @@
-package com.ns.kafka.producer;
+package com.ns.kafka.sample;
 
 import com.alibaba.fastjson.JSON;
 
@@ -48,7 +48,14 @@ public class Person {
 		System.out.println(person);
 		
 		String s = JSON.toJSONString(person);
+		
 		System.out.println(s);
+		
+		Person p = JSON.parseObject(s, Person.class);
+		
+		System.out.println("xxx");
+		System.out.println(p);
+		
 		
 	}
 }

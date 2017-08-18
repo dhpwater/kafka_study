@@ -14,11 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ns.kafka.producer;
+package com.ns.kafka;
 
 public class KafkaProperties {
-    public static final String TOPIC = "topic_person";
-    public static final String BOOTSTRAP_SERVERS= "bsa63:9092,bsa64:9092,bsa65:9092";
+    public static final String TOPIC = "person_top";
+    public static final String BOOTSTRAP_SERVERS= "bsa182:9092";
     public static final int KAFKA_PRODUCER_BUFFER_SIZE = 64 * 1024;
     public static final int CONNECTION_TIMEOUT = 100000;
     public static final String TOPIC2 = "topic2";
